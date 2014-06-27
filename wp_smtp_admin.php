@@ -71,7 +71,7 @@ function wp_smtp_page(){
 <h2>
 WP SMTP
 </h2>
-
+<?php print_r($plugin_name);?>
 <form action="" method="post" enctype="multipart/form-data" name="wp_smtp_form">
 
 <table class="form-table">
@@ -235,7 +235,6 @@ WP SMTP
 
 </div>
 <?php 
-print_r($plugin_name);
 }
 add_action('admin_menu', 'wp_smtp_admin');
 ?>

@@ -10,9 +10,9 @@ Text Domain: my-smtp-mail
 Domain Path: /lang
 */
 
-function settings_my_smtp_wp(){
+//function settings_my_smtp_wp(){
 	$plugin_name = "My SMTP WP";
-}
+//}
 
 function load_wp_smtp_lang(){
 	$currentLocale = get_locale();
