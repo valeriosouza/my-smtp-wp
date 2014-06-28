@@ -1,31 +1,44 @@
 <?php
 /*
 Plugin Name: My SMTP WP
-Plugin URI: http://boliquan.com/wp-smtp/
+Plugin URI: https://github.com/valeriosouza/my-smtp-wp
 Description: WP SMTP can help us to send emails via SMTP instead of the PHP mail() function.
-Version: 1.1.7
-Author: BoLiQuan
-Author URI: http://boliquan.com/
+Version: 0.1.0
+Author: Valerio Souza
+Author URI: http://valeriosouza.com.br
 Text Domain: my-smtp-mail
 Domain Path: /lang
 */
 
-//function settings_my_smtp_wp(){
-	$plugin_name = "My SMTP WP";
-//}
+// Actions and Filters
 
-function load_wp_smtp_lang(){
+add_filter('init','load_my_smtp_wp_lang');
+
+add_action('phpmailer_init','my_smtp_wp');
+
+register_activation_hook( __FILE__ , 'my_smtp_wp_activate' );
+
+add_filter('plugin_action_links','my_smtp_wp_settings_link',10,2);
+
+add_action('admin_menu', 'my_smtp_wp_admin');
+
+$wsOptions = get_option("my_smtp_wp_options");
+
+if($wsOptions["deactivate"]=="yes"){
+	register_deactivation_hook( __FILE__ , create_function('','delete_option("my_smtp_wp_options");') );
+}
+
+// Functions
+
+function load_my_smtp_wp_lang(){
 	$currentLocale = get_locale();
 	if(!empty($currentLocale)){
-		$moFile = dirname(__FILE__) . "/lang/wp-smtp-" . $currentLocale . ".mo";
-		if(@file_exists($moFile) && is_readable($moFile)) { load_textdomain('WP-SMTP',$moFile); }
+		$moFile = dirname(__FILE__) . "/lang/my-smtp-wp-" . $currentLocale . ".mo";
+		if(@file_exists($moFile) && is_readable($moFile)) { load_textdomain('my-smtp-mail',$moFile); }
 	}
 }
-add_filter('init','load_wp_smtp_lang');
 
-$wsOptions = get_option("wp_smtp_options");
-
-function wp_smtp($phpmailer){
+function my_smtp_wp($phpmailer){
 	global $wsOptions;
 	if( !is_email($wsOptions["from"]) || empty($wsOptions["host"]) ){
 		return;
@@ -44,9 +57,8 @@ function wp_smtp($phpmailer){
 		$phpmailer->Password = $wsOptions["password"];
 	}
 }
-add_action('phpmailer_init','wp_smtp');
 
-function wp_smtp_activate(){
+function my_smtp_wp_activate(){
 	$wsOptions = array();
 	$wsOptions["from"] = "";
 	$wsOptions["fromname"] = "";
@@ -57,23 +69,17 @@ function wp_smtp_activate(){
 	$wsOptions["username"] = "";
 	$wsOptions["password"] = "";
 	$wsOptions["deactivate"] = "";
-	add_option("wp_smtp_options",$wsOptions);
-}
-register_activation_hook( __FILE__ , 'wp_smtp_activate' );
-
-if($wsOptions["deactivate"]=="yes"){
-	register_deactivation_hook( __FILE__ , create_function('','delete_option("wp_smtp_options");') );
+	add_option("my_smtp_mail_options",$wsOptions);
 }
 
-function wp_smtp_settings_link($action_links,$plugin_file){
+function my_smtp_wp_settings_link($action_links,$plugin_file){
 	if($plugin_file==plugin_basename(__FILE__)){
-		$ws_settings_link = '<a href="options-general.php?page=' . dirname(plugin_basename(__FILE__)) . '/wp_smtp_admin.php">' . __("Settings") . '</a>';
+		$ws_settings_link = '<a href="options-general.php?page=' . dirname(plugin_basename(__FILE__)) . '/my-smtp-wp-admin.php">' . __("Settings") . '</a>';
 		array_unshift($action_links,$ws_settings_link);
 	}
 	return $action_links;
 }
-add_filter('plugin_action_links','wp_smtp_settings_link',10,2);
 
-if(is_admin()){require_once('wp_smtp_admin.php');}
+if(is_admin()){require_once('my-smtp-wp-admin.php');}
 
 ?>
