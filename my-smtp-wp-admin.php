@@ -10,7 +10,7 @@ My SMTP WP
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">
-			<?php _e('From','my-smtp-mail'); ?>
+			<?php _e('From Email','my-smtp-mail'); ?>
 		</th>
 		<td>
 			<label>
@@ -30,6 +30,14 @@ My SMTP WP
 	</tr>
 	<tr valign="top">
 		<th scope="row">
+			<h3><?php _e('SMTP Options','my-smtp-mail'); ?></h3>
+		</th>
+		<td>
+			
+		</td>
+	</tr>
+	<tr valign="top">
+		<th scope="row">
 			<?php _e('SMTP Host','my-smtp-mail'); ?>
 		</th>
 		<td>
@@ -40,23 +48,22 @@ My SMTP WP
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<?php _e('SMTP Secure','my-smtp-mail'); ?>
+			<?php _e('SMTP Encryption','my-smtp-mail'); ?>
 		</th>
 		<td>
-			<label>
+			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value=""<?php if ($wsOptions["smtpsecure"] == '') { ?> checked="checked"<?php } ?> />
-				None
-			</label>
-			&nbsp;
-			<label>
+				No encryption
+			</label></p>
+			
+			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value="ssl"<?php if ($wsOptions["smtpsecure"] == 'ssl') { ?> checked="checked"<?php } ?> />
-				SSL
-			</label>
-			&nbsp;
-			<label>
+				Use SSL encryption
+			</label></p>
+			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value="tls"<?php if ($wsOptions["smtpsecure"] == 'tls') { ?> checked="checked"<?php } ?> />
-				TLS
-			</label>
+				 Use TLS encryption
+			</label></p>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -74,20 +81,19 @@ My SMTP WP
 			<?php _e('SMTP Authentication','my-smtp-mail'); ?>
 		</th>
 		<td>
-			<label>
+			<p><label>
 				<input name="my_smtp_mail_smtpauth" type="radio" value="no"<?php if ($wsOptions["smtpauth"] == 'no') { ?> checked="checked"<?php } ?> />
-				No
-			</label>
-			&nbsp;
-			<label>
+				No: Do not use SMTP authentication
+			</label></p>
+			<p><label>
 				<input name="my_smtp_mail_smtpauth" type="radio" value="yes"<?php if ($wsOptions["smtpauth"] == 'yes') { ?> checked="checked"<?php } ?> />
-				Yes
-			</label>
+				Yes: Use SMTP authentication
+			</label></p>
 		</td>
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<?php _e('Username','my-smtp-mail'); ?>
+			<?php _e('Username ( Email Address )','my-smtp-mail'); ?>
 		</th>
 		<td>
 			<label>
@@ -97,22 +103,12 @@ My SMTP WP
 	</tr>
 	<tr valign="top">
 		<th scope="row">
-			<?php _e('Password','my-smtp-mail'); ?>
+			<?php _e('Password ( Email Address )','my-smtp-mail'); ?>
 		</th>
 		<td>
 			<label>
 				<input type="password" name="my_smtp_mail_password" value="<?php echo $wsOptions["password"]; ?>" size="43" style="width:272px;height:24px;" />
-			</label>
-		</td>
-	</tr>
-	<tr valign="top">
-		<th scope="row">
-			<?php _e('Delete Options','my-smtp-mail'); ?>
-		</th>
-		<td>
-			<label>
-				<input type="checkbox" name="my_smtp_mail_deactivate" value="yes" <?php if($wsOptions["deactivate"]=='yes') echo 'checked="checked"'; ?> />
-				<?php _e('Delete options while deactivate this plugin.','my-smtp-mail'); ?>
+				<input type="hidden" name="my_smtp_mail_deactivate" value="yes" />
 			</label>
 		</td>
 	</tr>

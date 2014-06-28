@@ -69,7 +69,7 @@ function my_smtp_wp_activate(){
 	$wsOptions["username"] = "";
 	$wsOptions["password"] = "";
 	$wsOptions["deactivate"] = "";
-	add_option("my_smtp_mail_options",$wsOptions);
+	add_option("my_smtp_wp_options",$wsOptions);
 }
 
 function my_smtp_wp_settings_link($action_links,$plugin_file){
