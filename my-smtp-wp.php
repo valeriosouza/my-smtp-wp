@@ -74,12 +74,12 @@ function my_smtp_wp_activate(){
 
 function my_smtp_wp_settings_link($action_links,$plugin_file){
 	if($plugin_file==plugin_basename(__FILE__)){
-		$ws_settings_link = '<a href="options-general.php?page=' . dirname(plugin_basename(__FILE__)) . '/my-smtp-wp-admin.php">' . __("Settings") . '</a>';
+		$ws_settings_link = '<a href="options-general.php?page=' . dirname(plugin_basename(__FILE__)) . '/class-my-smtp-wp.php">' . __("Settings") . '</a>';
 		array_unshift($action_links,$ws_settings_link);
 	}
 	return $action_links;
 }
 
-if(is_admin()){require_once('my-smtp-wp-admin.php');}
+if(is_admin()){require_once('class-my-smtp-wp.php');}
 
 ?>
