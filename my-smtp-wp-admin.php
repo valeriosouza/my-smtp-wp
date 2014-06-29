@@ -32,9 +32,6 @@ My SMTP WP
 		<th scope="row">
 			<h3><?php _e('SMTP Options','my-smtp-mail'); ?></h3>
 		</th>
-		<td>
-			
-		</td>
 	</tr>
 	<tr valign="top">
 		<th scope="row">
@@ -126,36 +123,24 @@ My SMTP WP
 <table class="form-table">
 	<tr valign="top">
 		<th scope="row">
+			<h3><?php _e('Send a Test Email','my-smtp-mail'); ?></h3>
+		</th>
+	</tr>
+	<tr valign="top">
+		<th scope="row">
 			<?php _e('To:','my-smtp-mail'); ?>
 		</th>
 		<td>
 			<label>
 				<input type="text" name="my_smtp_mail_to" value="" size="43" style="width:272px;height:24px;" />
 			</label>
-		</td>
-	</tr>
-	<tr valign="top">
-		<th scope="row">
-			<?php _e('Subject:','my-smtp-mail'); ?>
-		</th>
-		<td>
-			<label>
-				<input type="text" name="my_smtp_mail_subject" value="" size="43" style="width:272px;height:24px;" />
-			</label>
-		</td>
-	</tr>
-	<tr valign="top">
-		<th scope="row">
-			<?php _e('Message:','my-smtp-mail'); ?>
-		</th>
-		<td>
-			<label>
-				<textarea type="text" name="my_smtp_mail_message" value="" cols="45" rows="3" style="width:284px;height:62px;"></textarea>
-			</label>
+			<span class="description">Type an email address here and then click Send Test to generate a test email.</span>
 		</td>
 	</tr>
 </table>
 <p class="submit">
+<input type="hidden" name="my_smtp_mail_subject" value="<?php _e('[My SMTP WP] Your plugin is working','my-smtp-mail');?>"/>
+<input type="hidden" name="my_smtp_mail_message" value="<?php _e('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-mail');?>"/>
 <input type="hidden" name="my_smtp_mail_test" value="test" />
 <input type="hidden" name="my_smtp_mail_nonce_test" value="<?php echo $ws_nonce; ?>" />
 <input type="submit" class="button-primary" value="<?php _e('Send Test','my-smtp-mail'); ?>" />
