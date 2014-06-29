@@ -1,6 +1,7 @@
 <?php
 function my_smtp_wp_admin(){
 	add_options_page('My SMTP WP Options', 'My SMTP WP','manage_options', __FILE__, 'my_smtp_wp_page');
+	add_action('load-my_smtp_wp_admin', 'my_smtp_wp_help_tab');
 }
 
 function my_smtp_wp_page(){
@@ -65,5 +66,15 @@ function my_smtp_wp_page(){
 		}
 	}
 	if(is_admin()){require_once('my-smtp-wp-admin.php');}
+}
+function my_smtp_wp_help_tab () {
+    $screen = get_current_screen();
+
+    // Add my_help_tab if current screen is My Admin Page
+    $screen->add_help_tab( array(
+        'id'	=> 'my_help_tab',
+        'title'	=> __('My Help Tab'),
+        'content'	=> '<p>' . __( 'Descriptive content that will show in My Help Tab-body goes here.' ) . '</p>',
+    ) );
 }
 ?>
