@@ -7,17 +7,22 @@ Requires at least: 2.7
 Tested up to: 3.9.1
 Stable tag: 0.1.0
 
-MY SMTP WP can help us to send emails via SMTP instead of the PHP mail() function. 
+Configure your WordPress to send e-mails using your personal e-mail via SMTP.
 
 == Description ==
 
-soon
+Configure your WordPress to send e-mails using your personal e-mail via SMTP.
+
+Often useful when your WordPress does not send emails. 
+
+This happens because your server does not allow sending emails via PHP.
 
 = Usage =
 
-1. Download and extract `wp-smtp.zip` to `wp-content/plugins/`
+1. Download and extract `my-smtp-wp.zip` to `wp-content/plugins/`
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. "Dashboard"->"Settings"->"MY SMTP WP"
+4. Configure the plugin according to your hosting provider or email. How 'Gmail, Hotmail, Live, Yahoo' and other.
 
 
 == Installation ==
@@ -30,17 +35,23 @@ soon
 
 = 0.1.0 =
 
-* soon
+* Release Initial
 
 == Screenshots ==
 
-1. soon
+1. Configure for Gmail
 
 == Frequently Asked Questions ==
 
-soon
+= Where can I get data from my SMTP? =
 
+Most hosting forward these data at the time of signature. Companies like Gmail, Yahoo and Live disponabilizam this data on their websites.
+
+= Configured and not send emails. =
+
+Make sure the data is correct. Also check that no other SMTP plugin currently active.
 
 == Upgrade Notice ==
 
-soon
+= 0.1.0 =
+* Initial release.
