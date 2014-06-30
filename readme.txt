@@ -39,13 +39,15 @@ This happens because your server does not allow sending emails via PHP.
 
 == Screenshots ==
 
-1. Configure for Gmail
+1. Configure for Live
+
+2. Send a test e-mail
 
 == Frequently Asked Questions ==
 
 = Where can I get data from my SMTP? =
 
-Most hosting forward these data at the time of signature. Companies like Gmail, Yahoo and Live disponabilizam this data on their websites.
+Most hosting forward these data at the time of signature. Companies like Gmail, Yahoo and Live provide this data on their websites.
 
 = Configured and not send emails. =
 
