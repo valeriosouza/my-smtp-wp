@@ -50,16 +50,16 @@ My SMTP WP
 		<td>
 			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value=""<?php if ($wsOptions["smtpsecure"] == '') { ?> checked="checked"<?php } ?> />
-				No encryption
+				<?php _e('No encryption','my-smtp-mail'); ?>
 			</label></p>
 			
 			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value="ssl"<?php if ($wsOptions["smtpsecure"] == 'ssl') { ?> checked="checked"<?php } ?> />
-				Use SSL encryption
+				<?php _e('Use SSL encryption','my-smtp-mail'); ?>
 			</label></p>
 			<p><label>
 				<input name="my_smtp_mail_smtpsecure" type="radio" value="tls"<?php if ($wsOptions["smtpsecure"] == 'tls') { ?> checked="checked"<?php } ?> />
-				 Use TLS encryption
+				<?php _e('Use TLS encryption','my-smtp-mail'); ?>
 			</label></p>
 		</td>
 	</tr>
@@ -80,11 +80,11 @@ My SMTP WP
 		<td>
 			<p><label>
 				<input name="my_smtp_mail_smtpauth" type="radio" value="no"<?php if ($wsOptions["smtpauth"] == 'no') { ?> checked="checked"<?php } ?> />
-				No: Do not use SMTP authentication
+				<?php _e('No: Do not use SMTP authentication','my-smtp-mail'); ?>
 			</label></p>
 			<p><label>
 				<input name="my_smtp_mail_smtpauth" type="radio" value="yes"<?php if ($wsOptions["smtpauth"] == 'yes') { ?> checked="checked"<?php } ?> />
-				Yes: Use SMTP authentication
+				<?php _e('Yes: Use SMTP authentication','my-smtp-mail'); ?>
 			</label></p>
 		</td>
 	</tr>
@@ -134,7 +134,7 @@ My SMTP WP
 			<label>
 				<input type="text" name="my_smtp_mail_to" value="" size="43" style="width:272px;height:24px;" />
 			</label>
-			<span class="description">Type an email address here and then click Send Test to generate a test email.</span>
+			<span class="description"><?php _e('Type an email address here and then click Send Test to generate a test email.','my-smtp-mail'); ?></span>
 		</td>
 	</tr>
 </table>

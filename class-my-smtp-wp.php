@@ -62,7 +62,7 @@ function my_smtp_wp_page(){
 			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings or if there are other plugins SMTP active!","my-smtp-mail") . '</strong></p></div>';
 		}
 		elseif($failed == 2){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("The fields \"To\" \"Subject\" \"Message\" can not be left blank when testing!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("The fields \"To\" can not be left blank when testing!","my-smtp-mail") . '</strong></p></div>';
 		}
 	}
 	if(is_admin()){require_once('my-smtp-wp-admin.php');}

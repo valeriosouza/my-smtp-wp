@@ -7,7 +7,7 @@ Version: 0.1.0
 Author: Valerio Souza
 Author URI: http://valeriosouza.com.br
 Text Domain: my-smtp-mail
-Domain Path: /lang
+Domain Path: /languages
 */
 
 // Actions and Filters
@@ -33,7 +33,7 @@ if($wsOptions["deactivate"]=="yes"){
 function load_my_smtp_wp_lang(){
 	$currentLocale = get_locale();
 	if(!empty($currentLocale)){
-		$moFile = dirname(__FILE__) . "/lang/my-smtp-wp-" . $currentLocale . ".mo";
+		$moFile = dirname(__FILE__) . "/languages/my-smtp-wp-" . $currentLocale . ".mo";
 		if(@file_exists($moFile) && is_readable($moFile)) { load_textdomain('my-smtp-mail',$moFile); }
 	}
 }

@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: My SMTP WP\n"
+"POT-Creation-Date: 2014-07-03 23:21-0300\n"
+"PO-Revision-Date: 2014-07-03 23:23-0300\n"
+"Last-Translator: Valerio <valeriosza@gmail.com>\n"
+"Language-Team: Valério <valeriosza@gmail.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _;__;_x;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../class-my-smtp-wp.php:26
+msgid "The field \"From\" must be a valid email address!"
+msgstr "O campos \"De\" deve ser um endereço de e-mail válido!"
+
+#: ../class-my-smtp-wp.php:29
+msgid "The field \"SMTP Host\" can not be left blank!"
+msgstr "O campo \"SMTP Host\" não pode ser vazio!"
+
+#: ../class-my-smtp-wp.php:32
+msgid "Options saved."
+msgstr "Opções salvas com sucesso."
+
+#: ../class-my-smtp-wp.php:55
+msgid "Message sent successfully!"
+msgstr "Mensagem enviada com Sucesso!"
+
+#: ../class-my-smtp-wp.php:62
+msgid ""
+"Some errors occurred! Check the settings or if there are other plugins SMTP "
+"active!"
+msgstr ""
+"Ops, aconteceu algum erro! Verifique as configurações ou se existe outro "
+"plugin de SMTP ativo!"
+
+#: ../class-my-smtp-wp.php:65
+msgid "The fields \"To\" can not be left blank when testing!"
+msgstr "O campo \"Para\" não pode ficar em branco para efetuar o teste!"
+
+#: ../class-my-smtp-wp.php:76
+msgid "My Help Tab"
+msgstr "Ajuda"
+
+#: ../class-my-smtp-wp.php:77
+msgid "Descriptive content that will show in My Help Tab-body goes here."
+msgstr ""
+
+#: ../my-smtp-wp-admin.php:13
+msgid "From Email"
+msgstr "Email do Remetente"
+
+#: ../my-smtp-wp-admin.php:23
+msgid "From Name"
+msgstr "Nome do Remetente"
+
+#: ../my-smtp-wp-admin.php:33
+msgid "SMTP Options"
+msgstr "Opções do SMTP"
+
+#: ../my-smtp-wp-admin.php:38
+msgid "SMTP Host"
+msgstr "Servidor do SMTP"
+
+#: ../my-smtp-wp-admin.php:48
+msgid "SMTP Encryption"
+msgstr "Criptografia do SMTP"
+
+#: ../my-smtp-wp-admin.php:53
+msgid "No encryption"
+msgstr "Sem Criptografia"
+
+#: ../my-smtp-wp-admin.php:58
+msgid "Use SSL encryption"
+msgstr "Usar Criptografia SSL"
+
+#: ../my-smtp-wp-admin.php:62
+msgid "Use TLS encryption"
+msgstr "Usar Criptografia TLS"
+
+#: ../my-smtp-wp-admin.php:68
+msgid "SMTP Port"
+msgstr "Porta do SMTP"
+
+#: ../my-smtp-wp-admin.php:78
+msgid "SMTP Authentication"
+msgstr "Autenticação do SMTP"
+
+#: ../my-smtp-wp-admin.php:83
+msgid "No: Do not use SMTP authentication"
+msgstr "Não: Não usar Antenticação SMTP"
+
+#: ../my-smtp-wp-admin.php:87
+msgid "Yes: Use SMTP authentication"
+msgstr "Sim: Usar Autenticação SMTP"
+
+#: ../my-smtp-wp-admin.php:93
+msgid "Username ( Email Address )"
+msgstr "Usuário ( Endereço de Email )"
+
+#: ../my-smtp-wp-admin.php:103
+msgid "Password ( Email Address )"
+msgstr "Senha ( Do Endereço de Email )"
+
+#: ../my-smtp-wp-admin.php:117
+msgid "Save Changes"
+msgstr "Salvar Configurações"
+
+#: ../my-smtp-wp-admin.php:126
+msgid "Send a Test Email"
+msgstr "Enviar um Email de Teste"
+
+#: ../my-smtp-wp-admin.php:131
+msgid "To:"
+msgstr "Para:"
+
+#: ../my-smtp-wp-admin.php:137
+msgid ""
+"Type an email address here and then click Send Test to generate a test email."
+msgstr ""
+"Digite um endereço de email aqui e clique em Enviar Teste para efetuar um "
+"teste de envio."
+
+#: ../my-smtp-wp-admin.php:142
+msgid "[My SMTP WP] Your plugin is working"
+msgstr "[My SMTP WP] Seu plugin está funcionando"
+
+#: ../my-smtp-wp-admin.php:143
+msgid ""
+"If you are reading this email, it is because your plugin is successfully "
+"configured."
+msgstr ""
+"Se você está lendo isso, é porque seu plugin foi configurado com sucesso."
+
+#: ../my-smtp-wp-admin.php:146
+msgid "Send Test"
+msgstr "Enviar Teste"
+
+#: ../my-smtp-wp.php:77
+msgid "Settings"
+msgstr "Configurações"
