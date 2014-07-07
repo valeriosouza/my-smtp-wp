@@ -4,7 +4,7 @@ Donate link:
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls
 Requires at least: 2.7
 Tested up to: 3.9.1
-Stable tag: 0.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,10 @@ Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
 
+= 1.0.0 =
+
+* Add file translation .po and translate pt_BR
+
 = 0.1.0 =
 
 * Release Initial
@@ -64,7 +68,7 @@ Make sure the data is correct. Also check that no other SMTP plugin currently ac
 
 * New: Add file translation .po and translate pt_BR
 
-* Unreal: This WordPress plugin lets the Pink
+* Unreal: This plugin lets your WordPress the Pink
 
 = 0.1.0 =
 * Initial release.
