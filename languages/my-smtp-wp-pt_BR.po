@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: My SMTP WP\n"
 "POT-Creation-Date: 2014-07-03 23:21-0300\n"
-"PO-Revision-Date: 2014-07-03 23:23-0300\n"
+"PO-Revision-Date: 2014-07-06 22:37-0300\n"
 "Last-Translator: Valerio <valeriosza@gmail.com>\n"
 "Language-Team: Valério <valeriosza@gmail.com>\n"
 "Language: pt_BR\n"
@@ -114,7 +114,7 @@ msgstr "Salvar Configurações"
 
 #: ../my-smtp-wp-admin.php:126
 msgid "Send a Test Email"
-msgstr "Enviar um Email de Teste"
+msgstr "Enviar um Email de Teste."
 
 #: ../my-smtp-wp-admin.php:131
 msgid "To:"
