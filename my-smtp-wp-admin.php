@@ -109,6 +109,21 @@ My SMTP WP
 			</label>
 		</td>
 	</tr>
+	<tr valign="top">
+		<th scope="row">
+			<?php _e('Active Return-Path Header Fix?','my-smtp-mail'); ?>
+		</th>
+		<td>
+			<p><label>
+				<input name="my_smtp_mail_returnpath" type="radio" value="no"<?php if ($wsOptions["returnpath"] == 'no') { ?> checked="checked"<?php } ?> />
+				<?php _e('No: Do not use Return-Path','my-smtp-mail'); ?>
+			</label></p>
+			<p><label>
+				<input name="my_smtp_mail_returnpath" type="radio" value="yes"<?php if ($wsOptions["returnpath"] == 'yes') { ?> checked="checked"<?php } ?> />
+				<?php _e('Yes: Use Return-Path','my-smtp-mail'); ?>
+			</label></p>
+		</td>
+	</tr>
 </table>
 
 <p class="submit">

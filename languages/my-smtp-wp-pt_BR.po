@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: My SMTP WP\n"
-"POT-Creation-Date: 2014-07-03 23:21-0300\n"
-"PO-Revision-Date: 2014-07-06 22:37-0300\n"
-"Last-Translator: Valerio <valeriosza@gmail.com>\n"
+"POT-Creation-Date: 2014-08-04 13:30-0300\n"
+"PO-Revision-Date: 2014-08-04 13:34-0300\n"
+"Last-Translator: Valério <valeriosza@gmail.com>\n"
 "Language-Team: Valério <valeriosza@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -16,23 +16,23 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../class-my-smtp-wp.php:26
-msgid "The field \"From\" must be a valid email address!"
-msgstr "O campos \"De\" deve ser um endereço de e-mail válido!"
+#: ../class-my-smtp-wp.php:27
+msgid "The field \"From Email\" must be a valid email address!"
+msgstr "O campo \"Email do Remetente\" deve ser um endereço de e-mail válido!"
 
-#: ../class-my-smtp-wp.php:29
+#: ../class-my-smtp-wp.php:30
 msgid "The field \"SMTP Host\" can not be left blank!"
-msgstr "O campo \"SMTP Host\" não pode ser vazio!"
+msgstr "O campo \"Servidor do SMTP\" não pode ser vazio!"
 
-#: ../class-my-smtp-wp.php:32
+#: ../class-my-smtp-wp.php:33
 msgid "Options saved."
 msgstr "Opções salvas com sucesso."
 
-#: ../class-my-smtp-wp.php:55
+#: ../class-my-smtp-wp.php:56
 msgid "Message sent successfully!"
 msgstr "Mensagem enviada com Sucesso!"
 
-#: ../class-my-smtp-wp.php:62
+#: ../class-my-smtp-wp.php:63
 msgid ""
 "Some errors occurred! Check the settings or if there are other plugins SMTP "
 "active!"
@@ -40,15 +40,15 @@ msgstr ""
 "Ops, aconteceu algum erro! Verifique as configurações ou se existe outro "
 "plugin de SMTP ativo!"
 
-#: ../class-my-smtp-wp.php:65
+#: ../class-my-smtp-wp.php:66
 msgid "The fields \"To\" can not be left blank when testing!"
 msgstr "O campo \"Para\" não pode ficar em branco para efetuar o teste!"
 
-#: ../class-my-smtp-wp.php:76
+#: ../class-my-smtp-wp.php:77
 msgid "My Help Tab"
 msgstr "Ajuda"
 
-#: ../class-my-smtp-wp.php:77
+#: ../class-my-smtp-wp.php:78
 msgid "Descriptive content that will show in My Help Tab-body goes here."
 msgstr ""
 
@@ -108,40 +108,52 @@ msgstr "Usuário ( Endereço de Email )"
 msgid "Password ( Email Address )"
 msgstr "Senha ( Do Endereço de Email )"
 
-#: ../my-smtp-wp-admin.php:117
+#: ../my-smtp-wp-admin.php:114
+msgid "Active Return-Path Header Fix?"
+msgstr "Ativar a solução Return-Path?"
+
+#: ../my-smtp-wp-admin.php:119
+msgid "No: Do not use Return-Path"
+msgstr "Não: Não usar o Return-Path"
+
+#: ../my-smtp-wp-admin.php:123
+msgid "Yes: Use Return-Path"
+msgstr "Sim: Usar o Return-Path"
+
+#: ../my-smtp-wp-admin.php:132
 msgid "Save Changes"
 msgstr "Salvar Configurações"
 
-#: ../my-smtp-wp-admin.php:126
+#: ../my-smtp-wp-admin.php:141
 msgid "Send a Test Email"
 msgstr "Enviar um Email de Teste."
 
-#: ../my-smtp-wp-admin.php:131
+#: ../my-smtp-wp-admin.php:146
 msgid "To:"
 msgstr "Para:"
 
-#: ../my-smtp-wp-admin.php:137
+#: ../my-smtp-wp-admin.php:152
 msgid ""
 "Type an email address here and then click Send Test to generate a test email."
 msgstr ""
 "Digite um endereço de email aqui e clique em Enviar Teste para efetuar um "
 "teste de envio."
 
-#: ../my-smtp-wp-admin.php:142
+#: ../my-smtp-wp-admin.php:157
 msgid "[My SMTP WP] Your plugin is working"
 msgstr "[My SMTP WP] Seu plugin está funcionando"
 
-#: ../my-smtp-wp-admin.php:143
+#: ../my-smtp-wp-admin.php:158
 msgid ""
 "If you are reading this email, it is because your plugin is successfully "
 "configured."
 msgstr ""
 "Se você está lendo isso, é porque seu plugin foi configurado com sucesso."
 
-#: ../my-smtp-wp-admin.php:146
+#: ../my-smtp-wp-admin.php:161
 msgid "Send Test"
 msgstr "Enviar Teste"
 
-#: ../my-smtp-wp.php:77
+#: ../my-smtp-wp.php:92
 msgid "Settings"
 msgstr "Configurações"

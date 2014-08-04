@@ -20,10 +20,11 @@ function my_smtp_wp_page(){
 		$wsOptions["smtpauth"] = trim($_POST['my_smtp_mail_smtpauth']);
 		$wsOptions["username"] = trim($_POST['my_smtp_mail_username']);
 		$wsOptions["password"] = trim($_POST['my_smtp_mail_password']);
+		$wsOptions["returnpath"] = trim($_POST['my_smtp_mail_returnpath']);
 		$wsOptions["deactivate"] = (isset($_POST['my_smtp_mail_deactivate'])) ? trim($_POST['my_smtp_mail_deactivate']) : "";
 		update_option("my_smtp_wp_options",$wsOptions);
 		if(!is_email($wsOptions["from"])){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"From\" must be a valid email address!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"From Email\" must be a valid email address!","my-smtp-mail") . '</strong></p></div>';
 		}
 		elseif(empty($wsOptions["host"])){
 			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"SMTP Host\" can not be left blank!","my-smtp-mail") . '</strong></p></div>';
