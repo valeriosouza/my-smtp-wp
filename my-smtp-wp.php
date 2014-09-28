@@ -27,7 +27,7 @@ $wsOptions = get_option("my_smtp_wp_options");
 if($wsOptions["deactivate"]=="yes"){
 	register_deactivation_hook( __FILE__ , create_function('','delete_option("my_smtp_wp_options");') );
 }
-if ($wsOptions["returnpath"] == 'yes') {
+if ($wsOptions["returnpath"]=="yes") {
 // Function return path fix
 class email_return_path {
   	function __construct() {
