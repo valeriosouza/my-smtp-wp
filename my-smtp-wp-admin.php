@@ -124,6 +124,16 @@ My SMTP WP
 			</label></p>
 		</td>
 	</tr>
+	<tr valign="top">
+		<th scope="row">
+			<?php _e('Reply To ( Email Address )','my-smtp-mail'); ?>
+		</th>
+		<td>
+			<label>
+				<input type="text" name="my_smtp_mail_replyto" value="<?php echo $wsOptions["replyto"]; ?>" size="43" style="width:272px;height:24px;" />
+			</label>
+		</td>
+	</tr>
 </table>
 
 <p class="submit">
