@@ -3,8 +3,8 @@ Contributors: valeriosza
 Donate link: 
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
 Requires at least: 2.7
-Tested up to: 3.9.1
-Stable tag: 1.0.2
+Tested up to: 4.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,10 @@ Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
 
+= 1.1 =
+
+* Add reply to
+
 = 1.0.2 =
 
 * Add fix return_path
@@ -69,6 +73,10 @@ Most hosting forward these data at the time of signature. Companies like Gmail, 
 Make sure the data is correct. Also check that no other SMTP plugin currently active.
 
 == Upgrade Notice ==
+
+= 1.1 =
+
+* Add Reply To
 
 = 1.0.2 =
 

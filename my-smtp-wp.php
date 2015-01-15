@@ -60,12 +60,12 @@ function my_smtp_wp($phpmailer){
 	$phpmailer->From = $wsOptions["from"];
 	$phpmailer->FromName = $wsOptions["fromname"];
 	$phpmailer->Sender = $phpmailer->From; //Return-Path
-	$phpmailer->AddReplyTo($phpmailer->From,$phpmailer->FromName); //Reply-To
+	//$phpmailer->AddReplyTo($phpmailer->From,$phpmailer->FromName); //Reply-To
+	$phpmailer->AddReplyTo = $wsOptions["replyto"]; //Reply-To
 	$phpmailer->Host = $wsOptions["host"];
 	$phpmailer->SMTPSecure = $wsOptions["smtpsecure"];
 	$phpmailer->Port = $wsOptions["port"];
 	$phpmailer->Returnpath = $wsOptions["returnpath"];
-	$phpmailer->Returnpath = $wsOptions["replyto"];
 	$phpmailer->SMTPAuth = ($wsOptions["smtpauth"]=="yes") ? TRUE : FALSE;
 	if($phpmailer->SMTPAuth){
 		$phpmailer->Username = $wsOptions["username"];
@@ -77,6 +77,7 @@ function my_smtp_wp_activate(){
 	$wsOptions = array();
 	$wsOptions["from"] = "";
 	$wsOptions["fromname"] = "";
+	$wsOptions["replyto"] = "";
 	$wsOptions["host"] = "";
 	$wsOptions["smtpsecure"] = "";
 	$wsOptions["port"] = "";
@@ -84,7 +85,6 @@ function my_smtp_wp_activate(){
 	$wsOptions["username"] = "";
 	$wsOptions["password"] = "";
 	$wsOptions["returnpath"] = "";
-	$wsOptions["replyto"] = "";
 	$wsOptions["deactivate"] = "";
 	add_option("my_smtp_wp_options",$wsOptions);
 }

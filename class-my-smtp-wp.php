@@ -14,6 +14,7 @@ function my_smtp_wp_page(){
 		$wsOptions = array();
 		$wsOptions["from"] = trim($_POST['my_smtp_mail_from']);
 		$wsOptions["fromname"] = trim($_POST['my_smtp_mail_fromname']);
+		$wsOptions["replyto"] = trim($_POST['my_smtp_reply_to']);
 		$wsOptions["host"] = trim($_POST['my_smtp_mail_host']);
 		$wsOptions["smtpsecure"] = trim($_POST['my_smtp_mail_smtpsecure']);
 		$wsOptions["port"] = trim($_POST['my_smtp_mail_port']);
