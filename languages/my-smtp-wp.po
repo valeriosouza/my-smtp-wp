@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: My SMTP WP\n"
-"POT-Creation-Date: 2014-08-04 13:30-0300\n"
-"PO-Revision-Date: 2014-08-04 13:30-0300\n"
-"Last-Translator: Valério <valeriosza@gmail.com>\n"
+"POT-Creation-Date: 2015-01-14 23:47-0300\n"
+"PO-Revision-Date: 2015-01-14 23:47-0300\n"
+"Last-Translator: Valerio <valeriosza@gmail.com>\n"
 "Language-Team: Valério <valeriosza@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -16,37 +16,35 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../class-my-smtp-wp.php:27
+#: ../class-my-smtp-wp.php:28
 msgid "The field \"From Email\" must be a valid email address!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:30
+#: ../class-my-smtp-wp.php:31
 msgid "The field \"SMTP Host\" can not be left blank!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:33
+#: ../class-my-smtp-wp.php:34
 msgid "Options saved."
 msgstr ""
 
-#: ../class-my-smtp-wp.php:56
+#: ../class-my-smtp-wp.php:57
 msgid "Message sent successfully!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:63
-msgid ""
-"Some errors occurred! Check the settings or if there are other plugins SMTP "
-"active!"
+#: ../class-my-smtp-wp.php:64
+msgid "Some errors occurred! Check the settings!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:66
+#: ../class-my-smtp-wp.php:67
 msgid "The fields \"To\" can not be left blank when testing!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:77
+#: ../class-my-smtp-wp.php:78
 msgid "My Help Tab"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:78
+#: ../class-my-smtp-wp.php:79
 msgid "Descriptive content that will show in My Help Tab-body goes here."
 msgstr ""
 
@@ -59,96 +57,100 @@ msgid "From Name"
 msgstr ""
 
 #: ../my-smtp-wp-admin.php:33
+msgid "Reply To"
+msgstr ""
+
+#: ../my-smtp-wp-admin.php:43
 msgid "SMTP Options"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:38
+#: ../my-smtp-wp-admin.php:48
 msgid "SMTP Host"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:48
+#: ../my-smtp-wp-admin.php:58
 msgid "SMTP Encryption"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:53
+#: ../my-smtp-wp-admin.php:63
 msgid "No encryption"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:58
+#: ../my-smtp-wp-admin.php:68
 msgid "Use SSL encryption"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:62
+#: ../my-smtp-wp-admin.php:72
 msgid "Use TLS encryption"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:68
+#: ../my-smtp-wp-admin.php:78
 msgid "SMTP Port"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:78
+#: ../my-smtp-wp-admin.php:88
 msgid "SMTP Authentication"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:83
+#: ../my-smtp-wp-admin.php:93
 msgid "No: Do not use SMTP authentication"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:87
+#: ../my-smtp-wp-admin.php:97
 msgid "Yes: Use SMTP authentication"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:93
+#: ../my-smtp-wp-admin.php:103
 msgid "Username ( Email Address )"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:103
+#: ../my-smtp-wp-admin.php:113
 msgid "Password ( Email Address )"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:114
+#: ../my-smtp-wp-admin.php:124
 msgid "Active Return-Path Header Fix?"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:119
+#: ../my-smtp-wp-admin.php:129
 msgid "No: Do not use Return-Path"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:123
+#: ../my-smtp-wp-admin.php:133
 msgid "Yes: Use Return-Path"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:132
+#: ../my-smtp-wp-admin.php:142
 msgid "Save Changes"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:141
+#: ../my-smtp-wp-admin.php:151
 msgid "Send a Test Email"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:146
+#: ../my-smtp-wp-admin.php:156
 msgid "To:"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:152
+#: ../my-smtp-wp-admin.php:162
 msgid ""
 "Type an email address here and then click Send Test to generate a test email."
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:157
+#: ../my-smtp-wp-admin.php:167
 msgid "[My SMTP WP] Your plugin is working"
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:158
+#: ../my-smtp-wp-admin.php:168
 msgid ""
 "If you are reading this email, it is because your plugin is successfully "
 "configured."
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:161
+#: ../my-smtp-wp-admin.php:171
 msgid "Send Test"
 msgstr ""
 
-#: ../my-smtp-wp.php:92
+#: ../my-smtp-wp.php:94
 msgid "Settings"
 msgstr ""
