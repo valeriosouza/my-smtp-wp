@@ -3,8 +3,8 @@ Contributors: valeriosza
 Donate link: 
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
 Requires at least: 2.7
-Tested up to: 4.1
-Stable tag: 1.1
+Tested up to: 4.1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Often useful when your WordPress does not send emails.
 
 This happens because your server does not allow sending emails via PHP.
 
-Want to keep up with the latest news from this plugin? Follow Twitter [@valeriooficial](https://twitter.com/valeriooficial) and the hashtag [#mysmtpwp](https://twitter.com/search?f=realtime&q=%23mysmtpwp&src=typd).
+Want to keep up with the latest news from this plugin? Follow Twitter [@valeriosza](https://twitter.com/valeriosza) and the hashtag [#mysmtpwp](https://twitter.com/search?f=realtime&q=%23mysmtpwp&src=typd).
 
 = Usage =
 
@@ -39,6 +39,10 @@ Want to keep up with the latest news from this plugin? Follow Twitter [@valerioo
 Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
+
+= 1.2 =
+
+* Bug fixes
 
 = 1.1 =
 
@@ -73,6 +77,10 @@ Most hosting forward these data at the time of signature. Companies like Gmail, 
 Make sure the data is correct. Also check that no other SMTP plugin currently active.
 
 == Upgrade Notice ==
+
+= 1.2 =
+
+* Bug fixes
 
 = 1.1 =
 
