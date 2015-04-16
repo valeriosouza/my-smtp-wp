@@ -24,7 +24,7 @@ add_action('admin_menu', 'my_smtp_wp_admin');
 
 $wsOptions = get_option("my_smtp_wp_options");
 
-add_filter( 'plugin_row_meta', 'plugin_row_meta', 10, 4 );
+add_filter( 'plugin_row_meta', 'my_smtp_plugin_row_meta', 10, 4 );
 
 if($wsOptions["deactivate"]=="yes"){
 	register_deactivation_hook( __FILE__ , create_function('','delete_option("my_smtp_wp_options");') );
@@ -99,7 +99,7 @@ function my_smtp_wp_settings_link($action_links,$plugin_file){
 	return $action_links;
 }
 
-function plugin_row_meta( $links, $file ) {
+function my_smtp_plugin_row_meta( $links, $file ) {
 		if( plugin_basename( __FILE__ ) === $file ) {
 			$links[] = sprintf(
 				'<a target="_blank" href="%s">%s</a>',
