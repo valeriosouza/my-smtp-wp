@@ -164,8 +164,6 @@ My SMTP WP
 	</tr>
 </table>
 <p class="submit">
-<input type="hidden" name="my_smtp_mail_subject" value="<?php _e('[My SMTP WP] Your plugin is working','my-smtp-mail');?>"/>
-<input type="hidden" name="my_smtp_mail_message" value="<?php _e('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-mail');?>"/>
 <input type="hidden" name="my_smtp_mail_test" value="test" />
 <input type="hidden" name="my_smtp_mail_nonce_test" value="<?php echo $ws_nonce; ?>" />
 <input type="submit" class="button-primary" value="<?php _e('Send Test','my-smtp-mail'); ?>" />

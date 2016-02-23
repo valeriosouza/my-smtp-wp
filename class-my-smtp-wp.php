@@ -34,7 +34,25 @@ function my_smtp_wp_page(){
 			echo '<div id="message" class="updated fade"><p><strong>' . __("Options saved.","my-smtp-mail") . '</strong></p></div>';
 		}
 	}
-	if(isset($_POST['my_smtp_mail_test']) && isset($_POST['my_smtp_mail_nonce_test'])){
+
+	if ( isset( $_POST['my_smtp_mail_test'] ) && isset($_POST['my_smtp_mail_nonce_test']) ) {	
+		if(!wp_verify_nonce(trim($_POST['my_smtp_mail_nonce_test']),'my_ws_nonce')){
+			wp_die('Security check not passed!');
+		}
+			if( isset( $_POST['my_smtp_mail_to'] ) ){
+				if( is_email( $_POST['my_smtp_mail_to'] ) ){
+					$to =$_POST['my_smtp_mail_to'];
+				}
+				else{
+					$error .= " " . __( "Please enter a valid email address in the 'FROM' field.", 'my-smtp-mail' );
+				}
+			}
+			//$subject = isset( $_POST['my_smtp_mail_subject'] ) ? $_POST['my_smtp_mail_subject'] : '';
+			//$message = isset( $_POST['my_smtp_mail_message'] ) ? $_POST['my_smtp_mail_message'] : '';
+			if( ! empty( $to ) )
+				$result = my_smtp_wp_test_mail( $to );
+		}
+	/*if(isset($_POST['my_smtp_mail_test']) && isset($_POST['my_smtp_mail_nonce_test'])){
 		if(!wp_verify_nonce(trim($_POST['my_smtp_mail_nonce_test']),'my_ws_nonce')){
 			wp_die('Security check not passed!');
 		}
@@ -45,11 +63,12 @@ function my_smtp_wp_page(){
 		if(!empty($to) && !empty($subject) && !empty($message)){
 			try{
 				$result = wp_mail($to,$subject,$message);
+				//$result->Send();
 			}catch(phpmailerException $e){
 				$failed = 1;
+				return new WP_Error( $e->getCode(), $e->getMessage() );
 			}
-		}
-		else{
+		}else{
 			$failed = 2;
 		}
 		if(!$failed){
@@ -66,9 +85,77 @@ function my_smtp_wp_page(){
 		elseif($failed == 2){
 			echo '<div id="message" class="updated fade"><p><strong>' . __("The fields \"To\" can not be left blank when testing!","my-smtp-mail") . '</strong></p></div>';
 		}
-	}
+	}*/
 	if(is_admin()){require_once('my-smtp-wp-admin.php');}
 }
+
+function my_smtp_wp_test_mail( $to ) {
+                /*if(!swpsmtp_credentials_configured()){
+                    return;
+                }*/
+		$errors = '';
+		global $wsOptions;
+		//$swpsmtp_options = get_option( 'swpsmtp_options' );
+
+		require_once( ABSPATH . WPINC . '/class-phpmailer.php' );
+		$mail = new PHPMailer();
+                
+        $charset = get_bloginfo( 'charset' );
+		$mail->CharSet = $charset;
+                
+		$from_name  = $wsOptions["fromname"];
+		$from_email = $wsOptions["from"];
+
+		//$to_email = _e('[My SMTP WP] Your plugin is working','my-smtp-mail');
+		$subject = __('[My SMTP WP] Your plugin is working','my-smtp-mail');
+		//$subject = "[My SMTP WP] Your plugin is working";
+		$message = __('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-mail');
+		//$message = "If you are reading this email, it is because your plugin is successfully configured.";
+		
+		$mail->IsSMTP();
+		
+		/* If using smtp auth, set the username & password */
+		if( 'yes' == $wsOptions['smtpauth'] ){
+			$mail->SMTPAuth = true;
+			$mail->Username = $wsOptions['username'];
+			$mail->Password = $wsOptions['password'];
+		}
+		
+		/* Set the SMTPSecure value, if set to none, leave this blank */
+		if ( $wsOptions['smtpsecure'] !== '' ) {
+			$mail->SMTPSecure = $wsOptions['smtpsecure'];
+		}
+                
+                /* PHPMailer 5.2.10 introduced this option. However, this might cause issues if the server is advertising TLS with an invalid certificate. */
+                $mail->SMTPAutoTLS = false;
+		
+		/* Set the other options */
+		$mail->Host = $wsOptions['host'];
+		$mail->Port = $wsOptions['port']; 
+		$mail->SetFrom( $from_email, $from_name );
+		$mail->isHTML( true );
+		$mail->Subject = $subject;
+		$mail->MsgHTML( $message );
+		$mail->AddAddress( $to );
+		$mail->SMTPDebug = 0;
+
+		/* Send mail and return result */
+		if ( ! $mail->Send() )
+			$errors = $mail->ErrorInfo;
+		
+		$mail->ClearAddresses();
+		$mail->ClearAllRecipients();
+			
+		if ( ! empty( $errors ) ) {
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings!","my-smtp-mail") . '</strong><br><br>';
+			echo  $errors . '</p></div>';
+
+		}
+		else{
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Message sent successfully!","my-smtp-mail") . '</strong></p></div>';
+		}
+	}
+
 function my_smtp_wp_help_tab () {
     $screen = get_current_screen();
 
