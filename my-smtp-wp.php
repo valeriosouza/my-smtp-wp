@@ -46,11 +46,7 @@ new email_return_path();
 // Functions
 
 function load_my_smtp_wp_lang(){
-	$currentLocale = get_locale();
-	if(!empty($currentLocale)){
-		$moFile = dirname(__FILE__) . "/languages/my-smtp-wp-" . $currentLocale . ".mo";
-		if(@file_exists($moFile) && is_readable($moFile)) { load_textdomain('my-smtp-mail',$moFile); }
-	}
+	load_plugin_textdomain( 'my-smtp-mail', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 function my_smtp_wp($phpmailer){
