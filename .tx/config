@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+[my-smtp-wp.my-smtp-wp]
+file_filter = languages/my-smtp-wp-<lang>.po
+source_file = languages/my-smtp-wp.po
+source_lang = en_US
+type = PO
+minimum_perc = 75
+
