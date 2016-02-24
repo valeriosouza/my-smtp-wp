@@ -1,10 +1,10 @@
 ﻿=== MY SMTP WP ===
 Contributors: valeriosza
-Donate link: 
+Donate link: http://wordlab.com.br/donate/
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
 Requires at least: 2.7
-Tested up to: 4.2
-Stable tag: 1.2.1
+Tested up to: 4.4
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,10 @@ Often useful when your WordPress does not send emails.
 This happens because your server does not allow sending emails via PHP.
 
 Want to keep up with the latest news from this plugin? Follow Twitter [@valeriosza](https://twitter.com/valeriosza) and the hashtag [#mysmtpwp](https://twitter.com/search?f=realtime&q=%23mysmtpwp&src=typd).
+
+Help VIP?
+
+(http://wordlab.com.br/help-in-my-smtp-wp-configuration/)
 
 = Usage =
 
@@ -39,6 +43,11 @@ Want to keep up with the latest news from this plugin? Follow Twitter [@valerios
 Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
+
+= 1.3 =
+
+* Add debug in test email
+* Add alert about error in Gmail and Google Apps
 
 = 1.2 =
 
@@ -76,7 +85,20 @@ Most hosting forward these data at the time of signature. Companies like Gmail, 
 
 Make sure the data is correct. Also check that no other SMTP plugin currently active.
 
+= I use Gmail, and still have error. =
+
+[Authorize low security with applications](https://www.google.com/settings/u/0/security/lesssecureapps)
+
+or 
+
+[Create a application password for the plugin.](https://security.google.com/settings/u/0/security/apppasswords?pli=1)
+
 == Upgrade Notice ==
+
+= 1.3 =
+
+* Add debug in test email
+* Add alert about error in Gmail and Google Apps
 
 = 1.2 =
 

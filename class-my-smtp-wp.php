@@ -47,12 +47,13 @@ function my_smtp_wp_page(){
 					$error .= " " . __( "Please enter a valid email address in the 'FROM' field.", 'my-smtp-mail' );
 				}
 			}
-			//$subject = isset( $_POST['my_smtp_mail_subject'] ) ? $_POST['my_smtp_mail_subject'] : '';
-			//$message = isset( $_POST['my_smtp_mail_message'] ) ? $_POST['my_smtp_mail_message'] : '';
+			
 			if( ! empty( $to ) )
 				$result = my_smtp_wp_test_mail( $to );
 		}
-	/*if(isset($_POST['my_smtp_mail_test']) && isset($_POST['my_smtp_mail_nonce_test'])){
+	/*
+	Old Test
+	if(isset($_POST['my_smtp_mail_test']) && isset($_POST['my_smtp_mail_nonce_test'])){
 		if(!wp_verify_nonce(trim($_POST['my_smtp_mail_nonce_test']),'my_ws_nonce')){
 			wp_die('Security check not passed!');
 		}
@@ -106,11 +107,8 @@ function my_smtp_wp_test_mail( $to ) {
 		$from_name  = $wsOptions["fromname"];
 		$from_email = $wsOptions["from"];
 
-		//$to_email = _e('[My SMTP WP] Your plugin is working','my-smtp-mail');
 		$subject = __('[My SMTP WP] Your plugin is working','my-smtp-mail');
-		//$subject = "[My SMTP WP] Your plugin is working";
 		$message = __('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-mail');
-		//$message = "If you are reading this email, it is because your plugin is successfully configured.";
 		
 		$mail->IsSMTP();
 		
