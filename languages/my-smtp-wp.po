@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: My SMTP WP\n"
-"POT-Creation-Date: 2015-01-14 23:47-0300\n"
-"PO-Revision-Date: 2015-01-14 23:47-0300\n"
+"POT-Creation-Date: 2016-02-23 22:07-0300\n"
+"PO-Revision-Date: 2016-02-23 22:08-0300\n"
 "Last-Translator: Valerio <valeriosza@gmail.com>\n"
 "Language-Team: Valério <valeriosza@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _;__;_x;_e\n"
@@ -28,23 +28,33 @@ msgstr ""
 msgid "Options saved."
 msgstr ""
 
-#: ../class-my-smtp-wp.php:57
-msgid "Message sent successfully!"
+#: ../class-my-smtp-wp.php:47
+msgid "Please enter a valid email address in the 'FROM' field."
 msgstr ""
 
-#: ../class-my-smtp-wp.php:64
+#: ../class-my-smtp-wp.php:110
+msgid "[My SMTP WP] Your plugin is working"
+msgstr ""
+
+#: ../class-my-smtp-wp.php:112
+msgid ""
+"If you are reading this email, it is because your plugin is successfully "
+"configured."
+msgstr ""
+
+#: ../class-my-smtp-wp.php:150
 msgid "Some errors occurred! Check the settings!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:67
-msgid "The fields \"To\" can not be left blank when testing!"
+#: ../class-my-smtp-wp.php:155
+msgid "Message sent successfully!"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:78
+#: ../class-my-smtp-wp.php:165
 msgid "My Help Tab"
 msgstr ""
 
-#: ../class-my-smtp-wp.php:79
+#: ../class-my-smtp-wp.php:166
 msgid "Descriptive content that will show in My Help Tab-body goes here."
 msgstr ""
 
@@ -137,20 +147,14 @@ msgid ""
 "Type an email address here and then click Send Test to generate a test email."
 msgstr ""
 
-#: ../my-smtp-wp-admin.php:167
-msgid "[My SMTP WP] Your plugin is working"
-msgstr ""
-
-#: ../my-smtp-wp-admin.php:168
-msgid ""
-"If you are reading this email, it is because your plugin is successfully "
-"configured."
-msgstr ""
-
-#: ../my-smtp-wp-admin.php:171
+#: ../my-smtp-wp-admin.php:169
 msgid "Send Test"
 msgstr ""
 
-#: ../my-smtp-wp.php:94
+#: ../my-smtp-wp.php:96
 msgid "Settings"
+msgstr ""
+
+#: ../my-smtp-wp.php:107
+msgid "Donate"
 msgstr ""
