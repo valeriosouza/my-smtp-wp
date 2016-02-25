@@ -3,10 +3,10 @@
 Plugin Name: My SMTP WP
 Plugin URI: https://github.com/valeriosouza/my-smtp-wp
 Description: WP SMTP can help us to send emails via SMTP instead of the PHP mail() function.
-Version: 1.3.1
+Version: 1.3.2
 Author: Valerio Souza
 Author URI: http://valeriosouza.com.br
-Text Domain: my-smtp-mail
+Text Domain: my-smtp-wp
 Domain Path: /languages
 */
 
@@ -46,7 +46,7 @@ new email_return_path();
 // Functions
 
 function load_my_smtp_wp_lang(){
-	load_plugin_textdomain( 'my-smtp-mail', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'my-smtp-wp', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
 function my_smtp_wp($phpmailer){
@@ -100,7 +100,7 @@ function my_smtp_plugin_row_meta( $links, $file ) {
 			$links[] = sprintf(
 				'<a target="_blank" href="%s">%s</a>',
 				esc_url('http://wordlab.com.br/donate/'),
-				__( 'Donate', 'my-smtp-mail' )
+				__( 'Donate', 'my-smtp-wp' )
 			);
 		}
 		return $links;

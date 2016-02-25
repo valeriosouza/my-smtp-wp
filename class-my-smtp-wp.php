@@ -25,13 +25,13 @@ function my_smtp_wp_page(){
 		$wsOptions["deactivate"] = (isset($_POST['my_smtp_mail_deactivate'])) ? trim($_POST['my_smtp_mail_deactivate']) : "";
 		update_option("my_smtp_wp_options",$wsOptions);
 		if(!is_email($wsOptions["from"])){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"From Email\" must be a valid email address!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"From Email\" must be a valid email address!","my-smtp-wp") . '</strong></p></div>';
 		}
 		elseif(empty($wsOptions["host"])){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"SMTP Host\" can not be left blank!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("The field \"SMTP Host\" can not be left blank!","my-smtp-wp") . '</strong></p></div>';
 		}
 		else{
-			echo '<div id="message" class="updated fade"><p><strong>' . __("Options saved.","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Options saved.","my-smtp-wp") . '</strong></p></div>';
 		}
 	}
 
@@ -44,7 +44,7 @@ function my_smtp_wp_page(){
 					$to =$_POST['my_smtp_mail_to'];
 				}
 				else{
-					$error .= " " . __( "Please enter a valid email address in the 'FROM' field.", 'my-smtp-mail' );
+					$error .= " " . __( "Please enter a valid email address in the 'FROM' field.", 'my-smtp-wp' );
 				}
 			}
 			
@@ -74,17 +74,17 @@ function my_smtp_wp_page(){
 		}
 		if(!$failed){
 			if($result==TRUE){
-				echo '<div id="message" class="updated fade"><p><strong>' . __("Message sent successfully!","my-smtp-mail") . '</strong></p></div>';
+				echo '<div id="message" class="updated fade"><p><strong>' . __("Message sent successfully!","my-smtp-wp") . '</strong></p></div>';
 			}
 			else{
 				$failed = 1;
 			}
 		}
 		if($failed == 1){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings!","my-smtp-wp") . '</strong></p></div>';
 		}
 		elseif($failed == 2){
-			echo '<div id="message" class="updated fade"><p><strong>' . __("The fields \"To\" can not be left blank when testing!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("The fields \"To\" can not be left blank when testing!","my-smtp-wp") . '</strong></p></div>';
 		}
 	}*/
 	if(is_admin()){require_once('my-smtp-wp-admin.php');}
@@ -107,8 +107,8 @@ function my_smtp_wp_test_mail( $to ) {
 		$from_name  = $wsOptions["fromname"];
 		$from_email = $wsOptions["from"];
 
-		$subject = __('[My SMTP WP] Your plugin is working','my-smtp-mail');
-		$message = __('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-mail');
+		$subject = __('[My SMTP WP] Your plugin is working','my-smtp-wp');
+		$message = __('If you are reading this email, it is because your plugin is successfully configured.','my-smtp-wp');
 		
 		$mail->IsSMTP();
 		
@@ -145,12 +145,12 @@ function my_smtp_wp_test_mail( $to ) {
 		$mail->ClearAllRecipients();
 			
 		if ( ! empty( $errors ) ) {
-			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings!","my-smtp-mail") . '</strong><br><br>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Some errors occurred! Check the settings!","my-smtp-wp") . '</strong><br><br>';
 			echo  $errors . '</p></div>';
 
 		}
 		else{
-			echo '<div id="message" class="updated fade"><p><strong>' . __("Message sent successfully!","my-smtp-mail") . '</strong></p></div>';
+			echo '<div id="message" class="updated fade"><p><strong>' . __("Message sent successfully!","my-smtp-wp") . '</strong></p></div>';
 		}
 	}
 
