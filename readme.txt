@@ -1,10 +1,10 @@
 ﻿=== MY SMTP WP ===
 Contributors: valeriosza
-Donate link: http://wordlab.com.br/donate/
+Donate link: 
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
 Requires at least: 2.7
-Tested up to: 4.4
-Stable tag: 1.3.2
+Tested up to: 4.8.3
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,10 +21,6 @@ This happens because your server does not allow sending emails via PHP.
 [Translate MY SMTP WP](https://translate.wordpress.org/projects/wp-plugins/my-smtp-wp)
 
 Want to keep up with the latest news from this plugin? Follow Twitter [@valeriosza](https://twitter.com/valeriosza) and the hashtag [#mysmtpwp](https://twitter.com/search?f=realtime&q=%23mysmtpwp&src=typd).
-
-Help VIP?
-
-http://wordlab.com.br/help-in-my-smtp-wp-configuration/
 
 = Usage =
 
@@ -45,6 +41,10 @@ http://wordlab.com.br/help-in-my-smtp-wp-configuration/
 Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
+
+= 1.3.3 =
+
+* Update
 
 = 1.3 =
 
