@@ -1,10 +1,10 @@
 ﻿=== MY SMTP WP ===
 Contributors: valeriosza
-Donate link: 
+Donate link: https://valeriosouza.com.br/donate/
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
 Requires at least: 2.7
-Tested up to: 4.8.3
-Stable tag: 1.3.3
+Tested up to: 5.2.2
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,10 @@ Want to keep up with the latest news from this plugin? Follow Twitter [@valerios
 Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
+
+= 1.3.4 =
+
+* Update Fix
 
 = 1.3.3 =
 
