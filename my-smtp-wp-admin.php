@@ -1,15 +1,13 @@
-
 <div class="wrap">
 <style type="text/css">
 	th{
 		padding-left: 10px!important;
 	}
 </style>	
-<?php screen_icon(); ?>
 <h2>
 My SMTP WP
 </h2>
-<div id="message" class="notice notice-info fade"><p><strong><?php _e('Need help setting up?','my-smtp-wp'); ?> <a href="http://wordlab.com.br/help-in-my-smtp-wp-configuration/" target="_blank"><?php _e('Check how!','my-smtp-wp'); ?></a></strong></p></div>
+<div id="message" class="notice notice-info fade"><p><strong><?php _e('Need help setting up?','my-smtp-wp'); ?> <a href="https://valeriosouza.com.br/donations/donate-smtp/" target="_blank"><?php _e('Check how!','my-smtp-wp'); ?></a></strong></p></div>
 <div id="message" class="notice notice-error is-dismissible"><p><strong><?php _e('Using Gmail and getting error?','my-smtp-wp'); ?> <a href="https://www.google.com/settings/u/0/security/lesssecureapps" target="_blank"><?php _e('Authorize low security with applications','my-smtp-wp'); ?></a> <?php _e('or','my-smtp-wp'); ?> <a href="https://security.google.com/settings/u/0/security/apppasswords?pli=1" target="_blank"><?php _e('Create a application password for the plugin.','my-smtp-wp'); ?></a> </strong></p></div>
 <form action="" method="post" enctype="multipart/form-data" name="my_smtp_wp_form">
 
@@ -77,6 +75,10 @@ My SMTP WP
 				<p><label>
 					<input name="my_smtp_mail_smtpsecure" type="radio" value="tls"<?php if ($wsOptions["smtpsecure"] == 'tls') { ?> checked="checked"<?php } ?> />
 					<?php _e('Use TLS encryption','my-smtp-wp'); ?>
+				</label></p>
+				<p><label>
+					<input name="my_smtp_mail_smtpsecure" type="radio" value="starttls"<?php if ($wsOptions["smtpsecure"] == 'starttls') { ?> checked="checked"<?php } ?> />
+					<?php _e('Use STARTTLS','my-smtp-wp'); ?>
 				</label></p>
 			</td>
 		</tr>

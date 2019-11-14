@@ -2,9 +2,10 @@
 Contributors: valeriosza
 Donate link: https://valeriosouza.com.br/donate/
 Tags: MY SMTP WP,smtp,mail,email,phpmailer,mailer,wp mail,gmail,yahoo,mail smtp,ssl,tls,locaweb, send mail, email not send, email error
-Requires at least: 2.7
-Tested up to: 5.2.2
-Stable tag: 1.3.4
+Requires at least: 3.5
+Requires PHP: 5.3
+Tested up to: 5.3
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,8 +18,6 @@ Configure your WordPress to send e-mails using your personal e-mail via SMTP.
 Often useful when your WordPress does not send emails. 
 
 This happens because your server does not allow sending emails via PHP.
-
-[Translate MY SMTP WP](https://translate.wordpress.org/projects/wp-plugins/my-smtp-wp)
 
 Want to keep up with the latest news from this plugin? Follow Twitter [@valeriosza](https://twitter.com/valeriosza) and the hashtag [#mysmtpwp](https://twitter.com/search?f=realtime&q=%23mysmtpwp&src=typd).
 
@@ -41,6 +40,10 @@ Want to keep up with the latest news from this plugin? Follow Twitter [@valerios
 Use https://github.com/valeriosouza/my-smtp-wp
 
 == Changelog ==
+
+= 1.4.0 =
+
+* Add STARTTLS
 
 = 1.3.4 =
 
